@@ -1,0 +1,12 @@
+spring:
+  application:
+    name: discovery-service
+# Configure this Discovery Server
+eureka:
+  client:
+    register-with-eureka: false
+    fetch-registry: false
+
+# HTTP (Tomcat) port
+server:
+  port: 8761
