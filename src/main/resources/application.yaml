@@ -1,0 +1,13 @@
+server:
+  port: 8084
+spring:
+  application:
+    name: gallery-service
+
+eureka:
+  instance:
+    instance-id: ${spring.application.name}:${server.port}@${random.int}
+    preferIpAddress: true
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
