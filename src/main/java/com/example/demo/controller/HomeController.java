@@ -20,7 +20,9 @@ public class HomeController {
   private Environment env;
 
   @RequestMapping("/")
-  public void home() {
+  public String home() {
+
+    return "hello, you connect gallery service ,port 8084";
     // This is useful for debugging
     // When having multiple instance of gallery service running at different ports. // We load balance among them, and display which instance received the request.  return "Hello from Gallery Service running at port: " + env.getProperty("local.server.port");
   }
